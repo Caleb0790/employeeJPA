@@ -6,7 +6,6 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 @Configuration
 @ComponentScan
-@EnableAspectJAutoProxy
 public class App {
 	
 	public App() {

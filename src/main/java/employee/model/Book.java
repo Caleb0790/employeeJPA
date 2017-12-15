@@ -1,15 +1,36 @@
-package employee;
+package employee.model;
 
-import java.time.LocalDate;
 import java.util.Date;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+
+
+@Entity
+@Table(name="book")
 public class Book {
+	
+	@Id
 	private int id;
+	@Column
 	private String title;
+	@Column(name="nb_pages")
 	private int nbPages;
+	@Column
 	private String author;
+	@Column
+	@Temporal(TemporalType.DATE)
 	private Date publication_date;
 	
+	
+	public Book() {
+		super();
+	}
 	public int getId() {
 		return id;
 	}
